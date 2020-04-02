@@ -1,0 +1,270 @@
+/* Custom Propierties */
+:root {
+    --primario: #C2185B;
+    --primarioOscuro: rgb(156, 10, 69);
+    --secundario: #FFC107;
+
+    --fuentePrmaria: 'Arial', Helvetica, sans-serif;
+    --fuenteSecundaria: 'Poppins', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Globales */
+body {
+    font-family: var(--fuentePrmaria);
+    background-color: var(--primario);
+}
+
+h1, h2 {
+    font-family: var(--fuenteSecundaria);
+    margin: 0;
+    text-align: center;
+}
+
+h1 {
+    color: #fff;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--primario);
+}
+
+.contenedor-barra {
+    padding: 2rem;
+    background-color: var(--primarioOscuro);
+}
+
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.barra {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    align-items: center;
+}
+
+.sombra {
+    -webkit-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.50);
+    -moz-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.50);
+    box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.50);  
+    border-radius: .8rem;
+}
+
+.bg-amarillo {
+    background-color: var(--secundario);
+}
+
+.bg-blanco {
+    background-color: #fff;
+}
+
+/* BOTONES */
+.btn {
+    font-size: 2rem;
+    text-decoration: none;
+    
+}
+
+.btn-editar{
+    color: var(--secundario);
+}
+
+.btn-borrar {
+    color: var(--primario);
+}
+
+.volver {
+    color: #000;
+    background-color: var(--secundario);
+    padding: .5rem;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+
+}
+
+/* formulario */
+form {
+    padding: 3rem;
+    margin-top: 2rem;
+
+}
+
+legend {
+    font-family: var(--fuenteSecundaria);
+    font-size: 2rem;
+    text-align: center;
+    display: block;
+}
+
+legend span {
+    font-size: 1rem;
+    margin: 1rem 0;
+    text-align: center;
+    display: block;
+}
+
+@media (min-width:768px) {
+    .campos {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .campo {
+        flex: 0 0 calc(33.3% - 1rem);
+    }
+}
+
+.campo {
+    padding: 0.5rem 0;
+}
+
+.campo label {
+    font-size: 1.4rem;
+}
+
+.campo input[type ="text"],
+.campo input[type ="tel"] {
+    width: 100%;
+    padding: .7rem;
+    margin-top: .5rem;
+    border: none;
+    font-size: 1.2rem;
+}
+
+.enviar {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.campo input[type ="submit"] {
+    background-color: var(--primario);
+    border: none;
+    color: #fff;
+    padding: 1rem 4rem;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    transition: background-color .5s ease-in-out;
+    flex: 1;
+}
+
+@media (min-width: 768px) {
+    .campo input[type ="submit"] {
+        flex: 0 0 auto;
+    }
+}
+
+input[type ="submit"]:hover {
+    cursor: pointer;
+    background-color: var(--primarioOscuro);
+}
+
+/* Contactos */
+
+.contactos {
+    padding: 2rem;
+    margin: 3rem auto;
+}
+
+.contenedor-contactos {
+    max-width: 900px;
+    margin: 4rem auto 0 auto;
+}
+
+.buscador {
+    width: 100%;
+    height: 4rem;
+    padding: 1rem;
+    border: none;
+    margin: 2rem 0;
+}
+@media (max-width: 400px){ 
+    .contenedor-tabla {
+        overflow: scroll;
+    }
+}
+
+.total-contactos {
+    font-family: var(--fuenteSecundaria);
+    text-align: center;
+    color: var(--primario);
+    font-size: 2rem;
+}
+.total-contactos span {
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+.listado-contactos {
+    width: 100%;
+    margin-top: 2rem;
+    border-collapse: collapse;
+}
+
+.listado-contactos thead{
+    background-color: var(--primario);
+}
+
+.listado-contactos thead th {
+    padding: 1rem 0;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.listado-contactos tbody td {
+    padding: .5rem;
+}
+
+.listado-contactos tbody td:nth-child(4) {
+    text-align: center;
+}
+
+.listado-contactos button{
+    background-color: transparent!important;
+    border: none;
+    cursor: pointer;
+}
+
+/* Notificaciones */
+
+.notificacion {
+
+    display: inline-block;
+    padding: 1rem 3rem;
+    /* color: #fff; */
+    font-size: 1.5rem;
+    opacity: 0.9;
+    text-align: center;
+    /* border-radius: 1rem; */
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    opacity: 0;
+    transition: all .6s ease-in-out;
+    max-width: 350px;
+}
+
+.visible {
+    opacity: 1;
+}
+
+.error {
+    background-color: rgb(238, 148, 166);
+    color: rgb(163, 0, 33);
+}
+
+.correcto {
+    background-color: rgb(179, 241, 117);
+    color: green;
+}
